@@ -26,6 +26,7 @@ a {
   text-decoration: none;
   color: black;
   transition: all 200ms;
+
   &:hover {
     color: $orange;
     transform: scale(1.5);
@@ -71,11 +72,13 @@ h3 {
     background-color: $lblue;
     padding: $padding;
     border: $border;
+
     header {
       background-color: $white;
       background-image: url(./background.svg);
       border: 5px solid black;
       padding: $padding;
+
       h1,h2{
         margin: auto;
         text-align: center;
@@ -83,10 +86,12 @@ h3 {
         letter-spacing: 0.1em;
         -webkit-text-stroke: 1px black;
       }
+
       h1 {
         font-size: $s5;
         color: $red;
       }
+
       h2 {
         font-size: $s4;
         color: $orange;
@@ -107,21 +112,25 @@ h3 {
     ". c c"
     "d d ."
     "e e e";
+
     .explanation, .participation, .benefits, .requirements, footer {
       padding: $padding;
       border: $border;
       margin: 5px 0;
     }
+
     .explanation {
       grid-area: a;
       text-align: right;
       background-color: $yellow;
     }
+
     .benefits {
       grid-area: c;
       text-align: right;
       background-color: $dblue;
     }
+
     .participation {
       grid-area: b;
       background-color: $orange;
@@ -129,10 +138,12 @@ h3 {
         color: $red;
       }
     }
+
     .requirements {
       grid-area: d;
       background-color: $lblue;
     }
+
     footer {
       @include flex-container(space-around);
       grid-area: e;
@@ -142,9 +153,11 @@ h3 {
       letter-spacing: .1em;
     }
   }
+
   .sidebar {
     grid-area: sidebar;
     color: $red;
+
     h3 {
       width: 100%;
     }
@@ -158,12 +171,15 @@ h3 {
     grid-template-areas: 
     "intro sidebar"
     "main main";
+
     h1 {
       font-size: $s5;
     }
+
     h2, h2>abbr {
       font-size: $s4;
     }
+    
     h3, footer {
       font-size: $s3;
     }

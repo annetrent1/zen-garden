@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Caveat&display=swap');
 @import "variables";
 
+@mixin flex-container($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,12 +47,13 @@ h3 {
   font-family: $h-font;
   letter-spacing: 0.1em;
   background-color: $white;
-  border: 3px solid black;
+  border: $border;
   width: fit-content;
   padding: 5px 15px;
   margin: 0.2em 0;
 }
-/* Main Page Layout */
+
+// Layout and Nesting 
 
 .page-wrapper {
   max-width: 100%;
@@ -128,11 +134,10 @@ h3 {
       background-color: $lblue;
     }
     footer {
+      @include flex-container(space-around);
       grid-area: e;
       text-align: center;
       background-color: $red;
-      display: flex;
-      justify-content: space-around;
       font-size: $s2;
       letter-spacing: .1em;
     }

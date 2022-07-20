@@ -46,7 +46,6 @@ h3 {
   margin: 0.2em 0;
 }
 
-/* Main Page Layout */
 .page-wrapper {
   max-width: 100%;
   margin: auto;
@@ -118,11 +117,11 @@ h3 {
   background-color: #089CDA;
 }
 .page-wrapper .main footer {
+  display: flex;
+  justify-content: space-around;
   grid-area: e;
   text-align: center;
   background-color: #E31E2F;
-  display: flex;
-  justify-content: space-around;
   font-size: 1.96rem;
   letter-spacing: 0.1em;
 }
